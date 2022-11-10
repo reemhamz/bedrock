@@ -2,15 +2,13 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
+@use './modules/heroes.scss';
 @use './modules/home.scss';
 @use './modules/testimonials.scss';
-@use './modules/diversity.scss';
-@use './modules/teams.scss';
 @use './modules/locations.scss';
-@use './modules/benefits.scss';
 @use './modules/job-listings.scss';
 @use './modules/internships.scss';
-@use './modules/footer.scss';
+@use './modules/bottom.scss';
 
 @import '~@mozilla-protocol/core/protocol/css/includes/lib';
 

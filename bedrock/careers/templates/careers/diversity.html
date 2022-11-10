@@ -40,7 +40,7 @@
   </section>
 
   <!-- Metrics -->
-  <section class="c-careers-diversity-numbers c-overview-page-section">
+  <section class="c-careers-diversity-numbers c-careers-section">
     <div class="mzp-l-content mzp-t-content-md">
       <h2>By the numbers</h2>
       <p>We’re invested in making progress in diversity equity and inclusion at Mozilla — and we’re committed to the hard work needed to take us further.</p>
@@ -77,7 +77,7 @@
   </section>
 
   <!-- MRGs quotes -->
-  <section class="c-careers-diversity-mrg c-overview-page-section">
+  <section class="c-careers-diversity-mrg c-careers-section">
     <div class="mzp-l-content mzp-t-content-md">
       <h2>
         Mozilla Resource Groups
@@ -200,6 +200,59 @@
       {% endcall %}
 
     </ul>
+  </section>
+
+  <!-- blog content -->
+
+  <section class="c-careers-blog c-careers-section">
+    <div class="mzp-l-content mzp-t-content-md">
+      <h2>
+        Life@Mozilla
+      </h2>
+      <p>
+        Real people, real projects, real stories. Read about what it’s like to work here.
+      </p>
+    </div>
+
+    {% if recent_posts %}
+      <div class="mzp-l-card-third mzp-l-content">
+      {% for post in recent_posts %}
+        <div class="mzp-c-card mzp-c-card-medium mzp-has-aspect-16-9">
+          <a href="{{ post.link }}" class="mzp-c-card-block-link">
+            <div class="mzp-c-card-media-wrapper">
+              <div class="lazy-image-container">
+                <img src="{{ post.get_featured_image_url('post-large')|default(static('img/careers/blog-fallback.png'), true) }}" alt="{{ post.title }}" class="mzp-c-card-image" />
+              </div>
+            </div>
+            <div class="mzp-c-card-content">
+              <h2 class="mzp-c-card-title">{{ post.title }}</h2>
+              <div class="mzp-c-card-desc">
+                {{ post.excerpt }}
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+      {% if featured_post %}
+        <div class="mzp-c-card mzp-c-card-medium mzp-has-aspect-16-9">
+          <a href="{{ featured_post.link }}" class="mzp-c-card-block-link">
+            <div class="mzp-c-card-media-wrapper">
+              <div class="lazy-image-container">
+                <img src="{{ featured_post.image|default(static('img/careers/blog-fallback.png'), true) }}" class="mzp-c-card-image" />
+              </div>
+            </div>
+            <div class="mzp-c-card-content">
+              <h2 class="mzp-c-card-title">{{ featured_post.title }}</h2>
+              <div class="mzp-c-card-desc">
+                {{ featured_post.excerpt }}
+              </div>
+              <ul>
+            </div>
+          </a>
+        </div>
+      {% endif %}
+      </div>
+    {% endif %}
   </section>
 
 {% endblock %}
