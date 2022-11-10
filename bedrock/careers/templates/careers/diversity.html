@@ -24,7 +24,7 @@
         media_after=True
         ) %}
         <h1>Diversity & inclusion at Mozilla</h1>
-        <a href="{{ url('mozorg.diversity.2021.index') }}" class="mzp-c-button mzp-t-product">View our 2021 D&I Report</a>
+        <a href="{{ url('mozorg.diversity.2021.index') }}" class="mzp-c-button mzp-t-product" data-cta-type="button" data-cta-name="D&I 2021">View our 2021 D&I Report</a>
         {% endcall %}
       </div>
   </header>
@@ -213,7 +213,6 @@
         Real people, real projects, real stories. Read about what it’s like to work here.
       </p>
     </div>
-
     {% if recent_posts %}
       <div class="mzp-l-card-third mzp-l-content">
       {% for post in recent_posts %}

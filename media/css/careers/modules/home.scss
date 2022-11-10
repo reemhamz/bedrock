@@ -3,7 +3,6 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 @use '../utils' as cp;
-@use 'sass:color';
 @import '~@mozilla-protocol/core/protocol/css/includes/lib';
 
 // Homepaage
@@ -22,8 +21,6 @@
     padding: $layout-lg 0;
 }
 
-/* Locations */
-
 .c-careers-locations {
     .mzp-c-video {
         margin: $spacing-2xl 0;
@@ -35,7 +32,14 @@
     }
 }
 
+.c-careers-blog {
+    p {
+        text-align: center;
+    }
+}
+
 // Diversity page
+
 .c-careers-diversity-numbers {
     .mzp-c-picto-heading {
         @include text-title-xl;
