@@ -18,7 +18,8 @@
       <h1>Feel good about your work again</h1>
     </div>
     <div class="c-text-hero-body">
-      <p>Bring your drive, your creativity, your big ideas and your new perspectives to make the difference we’re aiming for.</p>
+      <p>Bring your drive, your creativity, your big ideas and your new perspectives
+        to make the difference we’re aiming for.</p>
     </div>
   </div>
 </header>
@@ -60,9 +61,9 @@
       #}
       {% set position = postings | first %}
       <tr class="position"
-          data-team="{{ position.department | trim }},"
-          data-type="{{ position.position_type | trim }},"
-          data-location="{{ postings | join(',', attribute='job_locations') }},">
+          data-team="{{ position.department | trim }}"
+          data-type="{{ position.position_type | trim }}"
+          data-location="{{ postings | join(',', attribute='job_locations') }}">
         <td class="title"><a href="{{ position.get_absolute_url() }}">{{ position.title }}</a></td>
         <td class="location">{{ postings | map(attribute='job_locations') | join(', ') }}</td>
         <td class="name">{{ position.department }}</td>
