@@ -353,6 +353,12 @@
     },
     {
       "files": [
+        "css/mozorg/modal-carousel/style.scss"
+      ],
+      "name": "modal-carousel"
+    },
+    {
+      "files": [
         "css/newsletter/newsletter-mozilla.scss"
       ],
       "name": "newsletter-mozilla"
@@ -1947,6 +1953,13 @@
         "js/mozorg/diversity/2021/diversity-2021.es6.js"
       ],
       "name": "diversity-2021"
+    },
+    {
+      "files": [
+        "protocol/js/protocol-modal.js",
+        "js/mozorg/modal-carousel/script.es6.js"
+      ],
+      "name": "modal-carousel"
     },
     {
       "files": [
