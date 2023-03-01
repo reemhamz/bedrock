@@ -130,6 +130,7 @@ urlpatterns = (
     page("diversity/2021/what-we-build/", "mozorg/diversity/2021/what-we-build.html"),
     page("diversity/2021/beyond-our-products/", "mozorg/diversity/2021/beyond-products.html"),
     page("diversity/2021/who-we-are/", "mozorg/diversity/2021/who-we-are.html"),
+    page("modal-carousel/", "mozorg/modal-carousel/index.html"),
     # Webvision
     redirect(r"^webvision/?$", "mozorg.about.webvision.summary", name="webvision", locale_prefix=False),
     path(

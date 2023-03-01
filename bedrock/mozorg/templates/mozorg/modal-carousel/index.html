@@ -1,0 +1,52 @@
+{#
+ This Source Code Form is subject to the terms of the Mozilla Public
+ License, v. 2.0. If a copy of the MPL was not distributed with this
+ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+#}
+
+{% extends "base-protocol-mozilla.html" %}
+
+{% block page_css %}
+  {{ css_bundle('modal-carousel')}}
+{% endblock %}
+
+{% block content %}
+
+<section class="mzp-c-modal-carousel mzp-l-content mzp-t-content-sm">
+    <h2>Testing out accessible modal carousel</h2>
+    <ul class="mzp-c-modal-carousel-wrapper">
+      <li tabindex="0" class="modal-item-1">
+
+        <a href="#modal1" class="modal-button-1 modal-button">Box 1</a>
+        <div class="mzp-u-modal-content hidden" id="modal1">
+          <p>MODAL 1</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repudiandae voluptatem ut neque tempore, incidunt ex soluta recusandae obcaecati. Eligendi.</p>
+        </div>
+
+      </li>
+      <li tabindex="0" class="modal-item-2">
+
+        <a href="#modal2" class="modal-button-2 modal-button">Box 2</a>
+        <div class="mzp-u-modal-content hidden" id="modal2">
+          <p>MODAL 2</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repudiandae voluptatem ut neque tempore, incidunt ex soluta recusandae obcaecati. Eligendi.</p>
+        </div>
+
+      </li>
+      <li tabindex="0" class="modal-item-3">
+
+        <a href="#modal3" class="modal-button-3 modal-button">Box 3</a>
+        <div class="mzp-u-modal-content hidden" id="modal3">
+          <p>MODAL 3</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi repudiandae voluptatem ut neque tempore, incidunt ex soluta recusandae obcaecati. Eligendi.</p>
+        </div>
+
+      </li>
+    </ul>
+  </section>
+
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('modal-carousel') }}
+{% endblock %}
